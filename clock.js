@@ -1,11 +1,12 @@
-const clockContainer = document.querySelector(".js-clock");
-clockTitle = clockContainer.querySelector("h1");
+const clockContainer = document.querySelector(".js-clock"),
+  clockTitle = clockContainer.querySelector("h1");
 
 function getTime() {
   const date = new Date(); // 현재 date를 불러와서 저장
   const hours = date.getHours(); // date에서 시간을 가져온다.
   const minutes = date.getMinutes(); // date에서 분을 가져온다.
   const seconds = date.getSeconds(); // date에서 초를 가져온다.
+  
   clockTitle.innerText = `${hours < 10 ? `0${hours}` : hours}:${
     minutes < 10 ? `0${minutes}` : minutes
   }:${seconds < 10 ? `0${seconds}` : seconds}`;
