@@ -1,12 +1,17 @@
 const body = document.querySelector("body");
 
-const IMG_NUMBER = 3;
+const IMG_NUMBER = 10;
+
+function handleImgLoad() {
+  console.log("finished loading");
+}
 
 function paintImage(imgNumber) {
-  const image = new Image();
-  image.src = `images/${imgNumber + 1}.jpg`;
-  image.classList.add("bgImage");
-  body.prepend(image);
+  const img = new Image();
+  img.src = `images/${imgNumber + 1}.jpg`;
+  // 새로운 class name 추가
+  img.classList.add("bgImage");
+  body.prepend(img);
 }
 
 function genRandom() {
@@ -18,5 +23,4 @@ function init() {
   const randomNumber = genRandom();
   paintImage(randomNumber);
 }
-
 init();

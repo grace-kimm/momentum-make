@@ -1,5 +1,5 @@
 const form = document.querySelector(".js-form"),
-  input = form.querySelector("input"),
+  input = document.querySelector("input"),
   greeting = document.querySelector(".js-greetings");
 
 const USER_LS = "currentUser",
@@ -36,6 +36,7 @@ function loadName() {
   }
 }
 
+// function init은 습관처럼 쓰기
 function init() {
   loadName();
 }
